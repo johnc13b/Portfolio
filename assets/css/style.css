@@ -59,7 +59,7 @@ header nav ul {
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 1.45vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -117,7 +117,7 @@ header nav ul li a:hover {
 /* PROFILE */
 .self img {
     float: left;
-    width: 30%;
+    width: 27%;
     align-self: center;
 }
 
@@ -156,8 +156,12 @@ header nav ul li a:hover {
 /* PORTFOLIO */
 .portfolio {
     background: var(--secondary-color);
-    overflow: hidden;
     align-content: center;
+}
+
+.container h2 {
+    font-size: 32px;
+    color: var(--primary-color);
 }
 
                 /* PORTFOLIO HOVER EFFECTS */
@@ -196,6 +200,9 @@ header nav ul li a:hover {
             position: relative;
             margin: 0.5%;
         }
+        .bg a {
+            color: #fff;
+        }
         .bg img {
             width: 100%;
             margin-bottom: -4px;
@@ -218,6 +225,7 @@ header nav ul li a:hover {
             width: 100%;
             padding-top: 20%;
             color: #fff;
+            font-size: 38px;
         }
         .bg .overlay p {
             position: absolute;    
@@ -283,24 +291,6 @@ section {
     padding: 30px 15px;
 }
 
-.step h3 {
-    flex: 1 100%;
-    text-align: center;
-}
-
-.step-info {
-    flex: 2 100%;
-    text-align: center;
-    justify-content: center;
-}
-
-.step-img {
-    flex: 0 32%;
-    margin-right: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
 .me-text {
     flex: 100%;
 }
@@ -337,9 +327,5 @@ section {
 
 .contact-info > * {
     flex: 0 100%;
-}
-
-.contact-form {
-    order: 3;
 }
 }
