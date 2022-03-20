@@ -85,12 +85,13 @@ header nav ul li a:hover {
 }
 
 .mission-statement {
-    width: 35%;
+    width: 75%;
     text-align: left;
     margin: 3.5%;
     color: black;
     font-size: 18px;
     line-height: 1.2;
+    position: relative;
 }
 
 .mission-statement h2 {
@@ -119,11 +120,13 @@ header nav ul li a:hover {
     float: left;
     width: 27%;
     align-self: center;
+    border-style: none;
 }
 
 .profile {
     background-color: var(--tertiary-color);
     align-content: center;
+    overflow: hidden;
 }
 
 .self {
@@ -156,7 +159,6 @@ header nav ul li a:hover {
 /* PORTFOLIO */
 .portfolio {
     background: var(--secondary-color);
-    align-content: center;
 }
 
 .container h2 {
@@ -191,7 +193,9 @@ header nav ul li a:hover {
         img,
         .overlay {
             transition: 0.3s all;
-            border-radius: 3px;
+            border-radius: 1px;
+            border-color: #ccc;
+            border-style: solid;
         }
 
         .bg {
@@ -218,23 +222,29 @@ header nav ul li a:hover {
             opacity: 0;
         }
         .bg .overlay h2 {
-            position: absolute;    
-            top: 50px;
+            position: relative;    
+            top: 30px;
             left: 0;
             bottom: 0;
             width: 100%;
             padding-top: 20%;
             color: #fff;
-            font-size: 38px;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .bg .overlay p {
-            position: absolute;    
-            top: 100px;
+            position: relative;    
+            top: 0;
             left: 0;
             bottom: 0;
             width: 100%;
             padding-top: 20%;
-            font-family: "Julius Sans One", sans-serif;
+            font-family: "Julius Sans One", sans-serif;            
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .bg:hover .overlay {
             opacity: 1;
@@ -246,6 +256,40 @@ header nav ul li a:hover {
                 /* END PORTFOLIO HOVER EFFECTS */
 
 /* END PORTFOLIO */
+
+/* SOCIALS */
+.social-media {
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+    align-content: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    flex-shrink: initial;
+    align-items: flex-start;
+    margin: 1rem auto;
+}
+
+.socials {
+    width: 75%;
+    text-align: left;
+    line-height: 1.2;
+    position: relative;
+}
+
+.socials h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.social-media img {
+    border: none;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/* END SOCIALS */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
@@ -276,13 +320,18 @@ footer h2, footer div {
 }
 
 .bg {
-    max-width: 60%;
+    max-width: 40%;
     margin: 1%;
 }
+
 .self img {
     flex: 0 100%;
 }
 
+.social img {
+    flex: 1 100%;
+    max-width: 40%;
+}
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -305,16 +354,21 @@ section {
 
 .bg {
     float: none;
-    max-width: 48%;
+    max-width: 50%;
     margin: 1% auto;
 }
+.social-media img {
+    flex: 1 100%;
+    max-width: 40%;
+}
+
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
 
-.section-title {
-    width: 95%;
+.hero {
+    width: 100%;
 }
 
 .self img {
@@ -327,5 +381,10 @@ section {
 
 .contact-info > * {
     flex: 0 100%;
+}
+
+.social img {
+    flex: 1 100%;
+    max-width: 40%;
 }
 }
